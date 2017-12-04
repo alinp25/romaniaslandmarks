@@ -1,0 +1,89 @@
+body {
+    background: #000;
+}
+
+#landing-header {
+    z-index: 1;
+    position: relative;
+    text-align: center;
+    padding-top: 40vh;
+}
+
+#landing-header h1 {
+    color: white;
+}
+
+.slideshow {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 0;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.slideshow li {
+    -webkit-filter: blur(5px);
+    -moz-filter: blur(5px);
+    -o-filter: blur(5px);
+    -ms-filter: blur(5px);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    background-size: cover;
+    background-position: 50% 50%;
+    background-repeat: none;
+    opacity: 0;
+    z-index: 0;
+    animation: imageAnimation 50s linear infinite;
+}
+
+.slideshow li:nth-child(1) {
+    background-image: url(https://upload.wikimedia.org/wikipedia/en/9/9f/Casa_Poporului.jpg);
+}
+
+.slideshow li:nth-child(2) {
+    background-image: url(https://cdn.theculturetrip.com/wp-content/uploads/2016/05/21392419306_3aa7ef07ab_k.jpg);
+    animation-delay: 10s;
+}
+
+.slideshow li:nth-child(3) {
+    background-image: url(https://misadventuresmag.com/wp-content/uploads/2014/03/ixnIhKr9RVZSF.jpg);
+    animation-delay: 20s;
+}
+
+.slideshow li:nth-child(4) {
+    background-image: url(http://ichef.bbci.co.uk/wwfeatures/wm/live/1280_720/images/live/p0/2p/9v/p02p9v3t.jpg);
+    animation-delay: 30s;
+}
+
+.slideshow li:nth-child(5) {
+    background-image: url(https://lh3.googleusercontent.com/-9iFyuqaU8pQ/WfwHiUKGeEI/AAAAAAABULU/6jRTDcEUnFg109nEX0D8MomltreddStCQCHMYCw/s72-c/voronet-monastery-12?imgmax=1600);
+    animation-delay: 40s;
+}
+
+@keyframes imageAnimation {
+    0% {
+        opacity: 0;
+        animation-timing-function: ease-in;
+    }
+    10% {
+        opacity: 1;
+        animation-timing-function: ease-out;
+    }
+    20% {
+        opacity: 1;
+    }
+    30% {
+        opacity: 1;
+    }
+}
+
+.no-cssanimations .slideshow li {
+    opacity: 1;
+}
